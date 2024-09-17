@@ -1,0 +1,45 @@
+# Ignore virtual environment folders
+venv/
+myprojectenv/
+DevVenv4300/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django migrations
+*/migrations/
+
+# Database files
+*.sqlite3
+
+# Logs and debug files
+*.log
+
+# Local environment settings
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE or editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.swn
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore MacOS specific files
+.DS_Store
