@@ -1,0 +1,242 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5; /* Light Grey */
+    color: #000000; /* Black */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: #000000; /* Black */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    color: #ffcc00; /* UCCS Gold */
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #333333; /* Dark Grey */
+    padding: 10px;
+    border-bottom: 2px solid #ffcc00; /* UCCS Gold */
+}
+
+nav a {
+    color: #ffffff; /* White */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffcc00; /* Gold Hover */
+    color: #000000; /* Black */
+}
+
+/* Movie Cards */
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #333333; /* Dark Grey */
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card img {
+    width: 100%;
+    border-bottom: 2px solid #ffcc00; /* UCCS Gold */
+}
+
+.movie-card-content {
+    padding: 15px;
+}
+
+.movie-card-title {
+    font-size: 1.5rem;
+    color: #ffcc00; /* UCCS Gold */
+    margin-bottom: 10px;
+}
+
+.movie-card-description {
+    font-size: 0.9rem;
+    color: #cccccc; /* Light Grey */
+    line-height: 1.4;
+}
+
+.movie-card-rating {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #ffffff; /* White */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #ffcc00; /* UCCS Gold */
+    color: #000000; /* Black */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #ffffff; /* White Hover */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black */
+    padding: 20px;
+    text-align: center;
+    color: #f5f5f5; /* Light Grey */
+    border-top: 2px solid #ffcc00; /* UCCS Gold */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Search Bar */
+.search-bar {
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #333333; /* Dark Grey */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    background-color: #1b1b1b; /* Darker Grey */
+    color: #f5f5f5; /* Light Grey */
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border-radius: 0 50px 50px 0;
+    background-color: #ffcc00; /* UCCS Gold */
+    border: none;
+    color: #000000; /* Black */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ffffff; /* White Hover */
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #333333; /* Dark Grey */
+    border-radius: 5px;
+    color: #f5f5f5; /* Light Grey */
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ffcc00; /* UCCS Gold */
+    color: #000000; /* Black */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .movie-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+    }
+}
