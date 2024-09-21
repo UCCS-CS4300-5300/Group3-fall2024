@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Grid - Mountain Lion Movies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional CSS for the grid layout */
+      .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+      }
+      .movie-tile {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .movie-tile img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .movie-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mountain Lion Movies</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="movies.html">Pick a Movie</a>
+          </li>
+          <li>
+            <a href="movie_grid.html">Movie Grid</a>
+          </li>
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Browse Movies</h2>
+      <div class="movie-grid">
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/backtofuture.mpw_500x749.jpg?v=1708444122" alt="Movie 1" />
+          <div class="movie-title">Movie Title 1</div>
+        </div>
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/Alien.mpw.114883_500x749.jpg?v=1715178006" alt="Movie 2" />
+          <div class="movie-title">Movie Title 2</div>
+        </div>
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/scarface.mpw.115473_500x749.jpg?v=1709821135" alt="Movie 3" />
+          <div class="movie-title">Movie Title 3</div>
+        </div>
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/darkknight.building.24x36_20e90057-f673-4cc3-9ce7-7b0d3eeb7d83_500x749.jpg?v=1707491191" alt="Movie 4" />
+          <div class="movie-title">Movie Title 4</div>
+        </div>
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/files/jurassicpark.mpw_500x749.jpg?v=1713805481" alt="Movie 5" />
+          <div class="movie-title">Movie Title 5</div>
+        </div>
+        <div class="movie-tile">
+          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/6cd691e19fffbe57b353cb120deaeb8f_8489d7bf-24ba-4848-9d0f-11f20cb35025_500x749.jpg?v=1573613877" alt="Movie 6" />
+          <div class="movie-title">Movie Title 6</div>
+        </div>
+        <!-- Add more movie tiles as needed -->
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Mountain Lion Movies. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
