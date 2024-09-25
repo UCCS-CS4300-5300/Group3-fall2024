@@ -1,3 +1,4 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,28 +7,14 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
-    <header>
-      <h1>Mountain Lion Movies</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="movies.html">Pick a Movie</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    {% include 'header.html' %}
 
     <main>
       <h2>Welcome to Mountain Lion Movies</h2>
       <p>Your one-stop destination to find the perfect movie from any streaming service.</p>
-      <a href="movies.html" class="btn">Pick a Movie</a>
+      <a href="imdb.com" class="btn">Pick a Movie</a>
     </main>
 
-    <footer>
-      <p>2024 Mountain Lion Movies. All rights reserved.</p>
-    </footer>
+    {% include 'footer.html' %}
   </body>
 </html>
