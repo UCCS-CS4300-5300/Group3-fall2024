@@ -9,7 +9,9 @@
 *  **Garrett** Smith
 
 ### HOW TO RUN THE PROGRAM
-`python3 app.py`
+1. `start virtual environment`
+2. `cd group3Project`
+3. `python manage.py runserver`
 
 ### HOW TO START YOUR VIRTUAL ENVIRONMENT
 For mac:
