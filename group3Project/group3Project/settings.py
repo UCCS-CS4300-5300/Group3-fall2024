@@ -24,7 +24,16 @@ SECRET_KEY = 'django-insecure-omp#qn5t6o(kf!xqxmoa-1w&p-ods69(m9060r&j^on9jbr%3m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0:3000', '0.0.0.0', '127.0.0.1:8000', '127.0.0.1']
+
+ALLOWED_HOSTS = [
+'0.0.0.0:3000','0.0.0.0', '127.0.0.1:8000', '127.0.0.1',
+'https://app-tditmans-5.devedu.io/', 'app-tditmans-5.devedu.io',
+'https://app-nengler-5.devedu.io', 'https://app-nengler-5.devedu.io/',
+'https://app-ajudson-5.devedu.io/', 'app-ajudson-5.devedu.io',
+'https://app-rkrolesk-5.devedu.io/', 'app-rkrolesk-5.devedu.io',
+'https://app-kmayberr-5.devedu.io/', 'app-kmayberr-5.devedu.io',
+'https://app-kmayberr-5.devedu.io/', 'app-kmayberr-5.devedu.io',
+]
 
 
 # Application definition
