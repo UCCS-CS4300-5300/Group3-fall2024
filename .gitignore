@@ -2,6 +2,7 @@
 venv/
 myprojectenv/
 DevVenv4300/
+/django/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
