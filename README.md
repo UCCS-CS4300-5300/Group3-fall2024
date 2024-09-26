@@ -1,12 +1,12 @@
 # Mountian Lion Movie Application
 
 # Group 3
-Travis Dittmanson
-Nathan Engler
-Ashley Judson 
-Kory Mayberry 
-Bob Kroleski
-Garrett Smith
+- Travis Dittmanson
+- Nathan Engler
+- Ashley Judson 
+- Kory Mayberry 
+- Bob Kroleski
+- Garrett Smith
 
 # HOW TO RUN THE PROGRAM
 > python3 app.py
