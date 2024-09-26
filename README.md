@@ -1,8 +1,8 @@
 # Mountian Lion Movie Application
 
 # Group 3
-\\Travis Dittmanson
-\\Nathan Engler
+- Travis Dittmanson
+- Nathan Engler
 - Ashley Judson 
 - Kory Mayberry 
 - Bob Kroleski
