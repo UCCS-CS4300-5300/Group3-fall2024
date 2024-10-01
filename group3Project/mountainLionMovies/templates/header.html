@@ -1,10 +1,13 @@
 <!-- templates/header.html -->
+{% load static %}
+
 <header>
   <h1>Mountain Lion Movies</h1>
   <nav>
     <ul>
       <li>
-        <a href="{% url 'index' %}">Home</a>
+        <image href="{% url 'index' %}"><img src="{% static '\photos\mlm2_logo.png' %}"
+        width = "100"/></image>
       </li>
       <li>
         <a href="https://imdb.com">Pick a Movie</a>

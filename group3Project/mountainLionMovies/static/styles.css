@@ -41,13 +41,20 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     background-color: #333333; /* Dark Grey */
-    padding: 10px;
-    border-bottom: 2px solid #CFB87C; /* UCCS Gold */
+    padding: 30px;
+    border-bottom: 4px solid #CFB87C; /* UCCS Gold */
 }
 
 nav a {
+    color: #ffffff; /* White */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav image {
     color: #ffffff; /* White */
     padding: 10px 20px;
     border-radius: 5px;
@@ -58,6 +65,8 @@ nav a:hover {
     background-color: #CFB87C; /* Gold Hover */
     color: #000000; /* Black */
 }
+
+
 
 /* Movie Cards */
 .movie-container {
