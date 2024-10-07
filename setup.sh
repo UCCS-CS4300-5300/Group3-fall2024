@@ -50,6 +50,8 @@ if [ -z "$manage" ]; then
 fi
 python3 $manage runserver 0.0.0.0:3000
 }
+
+
 function push {
     local commitMessage="$1"  # Use local variable for the commit message
 
@@ -75,6 +77,51 @@ function push {
     # Fetch and rebase
     git fetch origin
     git rebase origin
+
+    #set remotes
+    git remote set-url origin https://github.com/Ditmanson/CS4300
+    git remote set-url secondary https://github.com/UCCS-CS4300-5300/Group3-fall2024.git
+    echo "Remotes set:"
+    git remote -v
+
+    # Push to both remotes
+    git push -u origin "${current}"
+    git push -u secondary "${current}"
+
+    echo "Proceed to GitHub to create pull requests."
+}
+
+function pushsh {
+    local commitMessage="$1"  # Use local variable for the commit message
+
+    # Check if a commit message was provided
+    if [[ -z "$commitMessage" ]]; then
+        echo "Error: No commit message provided."
+        echo "Please provide a commit message using quotes, e.g., 'git_push_with_message \"Your commit message\"'"
+        return 1
+    fi
+
+    echo "Your commit message: ${commitMessage}"
+
+    # Get the current branch name
+    local current
+    current=$(git branch --show-current)
+
+    # Add all changes
+    git add -A
+
+    # Commit the changes
+    git commit -m "$commitMessage"
+    
+    # Fetch and rebase
+    git fetch origin
+    git rebase origin
+
+     #set remotes
+    git remote set-url origin git@github.com:Ditmanson/CS4300.git
+    git remote set-url secondary git@github.com:UCCS-CS4300-5300/Group3-fall2024.git
+    echo "Remotes set:"
+    git remote -v
 
     # Push to both remotes
     git push -u origin "${current}"
