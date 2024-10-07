@@ -77,8 +77,8 @@ function push {
     git rebase origin
 
     # Push to both remotes
-    git push -u origin "${current}" -f
-    git push -u secondary "${current}" -f
+    git push -u origin "${current}"
+    git push -u secondary "${current}"
 
     echo "Proceed to GitHub to create pull requests."
 }
