@@ -1,5 +1,6 @@
 # Ignore virtual environment folders
 venv/
+myenv/
 myprojectenv/
 DevVenv4300/
 /django/
