@@ -49,3 +49,7 @@ class Command(BaseCommand):
                 except Exception as e:
                     self.stderr.write(self.style.ERROR(f'Error processing film {row.get("title", "Unknown")}: {e}'))
         self.stdout.write(self.style.SUCCESS('Data imported successfully'))
+
+
+
+        

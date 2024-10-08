@@ -90,8 +90,6 @@ class LT_Films_Cast(models.Model):
     character = models.CharField(max_length=200)
     credit_id = models.CharField(max_length=200)
     order = models.IntegerField()
-    class Meta:
-        unique_together = ('film', 'person')
 
 class LT_Films_Companies(models.Model):
     film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
@@ -111,8 +109,6 @@ class LT_Films_Crew(models.Model):
     credit_id = models.CharField(max_length=200)
     department = models.CharField(max_length=200)
     job = models.CharField(max_length=200)
-    class Meta:
-        unique_together = ('film', 'person')
 
 class LT_Films_Genres(models.Model):
     film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
@@ -132,18 +128,18 @@ class LT_Films_Languages(models.Model):
     film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
     language = models.ForeignKey(Language, on_delete=models.DO_NOTHING)
 
-# class LT_Viewer_Seen_Films(models.Model):
-#     viewer = models.ForeignKey(Viewer, on_delete=models.DO_NOTHING)
-#     film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
-#     seen_film = models.BooleanField(default=False)
-#     film_ranking_score = models.DecimalField(decimal_places=8, max_digits=9, null=True)
-#     class Meta:
-#         unique_together = ('viewer', 'film')
+class LT_Seen_Film_Ratings(models.Model):
+    viewer = models.ForeignKey(Viewer, on_delete=models.DO_NOTHING)
+    film1 = models.ForeignKey(Film, on_delete=models.DO_NOTHING, related_name='film1')
+    film2 = models.ForeignKey(Film, on_delete=models.DO_NOTHING, related_name='film2')
+    date_of_rating = models.DateField(blank=True, null = True)
+    film1_preferred = models.BooleanField(default=False)
+    film2_preferred = models.BooleanField(default=False)
 
-# class LT_Seen_Film_Ratings(models.Model):
-#     viewer = models.ForeignKey(Viewer, on_delete=models.DO_NOTHING)
-#     film1 = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
-#     film2 = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
-#     date_of_rating = models.DateField
-#     film1_preferred = models.BooleanField(default=False)
-#     film2_preferred = models.BooleanField(default=False)
+class LT_Viewer_Seen_Films(models.Model):
+    viewer = models.ForeignKey(Viewer, on_delete=models.DO_NOTHING)
+    film = models.ForeignKey(Film, on_delete=models.DO_NOTHING)
+    seen_film = models.BooleanField(default=False)
+    film_ranking_score = models.DecimalField(decimal_places=8, max_digits=9, null=True)
+    class Meta:
+        unique_together = ('viewer', 'film')
